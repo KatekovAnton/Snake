@@ -23,12 +23,31 @@ SSnake::SSnake(SGameField *gameField, CCNode *node)
 
 SSnake::~SSnake()
 {
-    _sprites->release();
+    Hide();
 }
 
-void SSnake::Update()
+void SSnake::Hide()
 {
-    _data->MakeAdvance();
+    if (!_sprites) 
+        return;
+    
+    for (int i = 0; i < _sprites->count(); i++) {
+        CCSprite *spr = reinterpret_cast<CCSprite*>(_sprites->objectAtIndex(i));
+        spr->removeFromParentAndCleanup(true);
+    }
+    _sprites->release();
+    _sprites = NULL;
+}
+
+bool SSnake::Update()
+{
+    if (_data->CanMakeAdvance())
+    {
+        _data->MakeAdvance();
+        return true;
+    }
+    else
+        return false;
 }
 
 void SSnake::UpdateView()

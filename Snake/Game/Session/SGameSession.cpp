@@ -9,11 +9,12 @@
 #include "SGameSession.h"
 #include "SGameField.h"
 #include "SSnake.h"
+#include "SGameSessionDelegate.h"
 
 #include "miniPrefix.h"
 
 SGameSession::SGameSession()
-:_delegate_w(NULL)
+:_delegate_w(NULL), _started(false), _score(0)
 {
     _baseNode = CCNode::create();
     _baseNode->setContentSize(CCDirector::sharedDirector()->getRunningScene()->getContentSize());
@@ -26,13 +27,38 @@ SGameSession::SGameSession()
     
     _gameField = new SGameField(20, 30, _baseNode);
     _snake = new SSnake(_gameField, _snakeNode);
-    
-    
-    
+
 }
 
 SGameSession::~SGameSession()
-{}
+{
+    StopTimer();
+    delete _gameField;
+    delete _snake;
+}
+
+void SGameSession::StartTimer()
+{
+    StopTimer();
+    CCDirector::sharedDirector()->getScheduler()->scheduleSelector(schedule_selector(SGameSession::OnTimer), this, 1, false);
+    _started = true;
+}
+
+void SGameSession::StopTimer()
+{
+    CCDirector::sharedDirector()->getScheduler()->unscheduleAllSelectorsForTarget(this);
+    _started = false;
+}
+
+void SGameSession::OnTimer(float delta)
+{
+    Update();
+}
+
+void SGameSession::Start()
+{
+    StartTimer();
+}
 
 void SGameSession::ProcessAction(int actionCode)
 {
@@ -41,6 +67,10 @@ void SGameSession::ProcessAction(int actionCode)
 
 void SGameSession::Update()
 {
+    if (_snake->Update())
+        _snake->UpdateView();
+    else
+        _delegate_w->SessionDidFinishFail(_score);
 }
 
 

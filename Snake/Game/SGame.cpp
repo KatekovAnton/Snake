@@ -38,6 +38,7 @@ void SGame::StartNewSession()
         delete _currentSession;
     _currentSession = new SGameSession();
     _currentSession->_delegate_w = this;
+    _currentSession->Start();
 }
 
 #pragma mark - DisplayInputDelegate
@@ -54,9 +55,18 @@ void SGame::ProcessAction(int actionCode)
 
 #pragma mark - SGameSessionDelegate
 
+void SGame::AbortCurrentSession()
+{
+    delete _currentSession;
+}
+
 void SGame::SessionDidFinishFail(int score)
-{}
+{
+    AbortCurrentSession();
+}
 
 void SGame::SessionDidFinishSuccess(int score)
-{}
+{
+    AbortCurrentSession();
+}
 

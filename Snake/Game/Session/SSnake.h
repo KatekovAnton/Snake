@@ -32,7 +32,9 @@ public:
     SSnake(SGameField* gameField, CCNode *node);
     ~SSnake();
     
-    void Update();
+    void Hide();
+    
+    bool Update();
     void UpdateView();
     void ProcessInputCommand(int command);
 };

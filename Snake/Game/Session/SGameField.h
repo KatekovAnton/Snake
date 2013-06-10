@@ -29,6 +29,9 @@ public:
     SGameField(const int x, const int y, CCNode *node);
     ~SGameField();
     
+    void ShowGameField();
+    void HideGameField();
+    
     CCPoint ScreenCoordinatesForCell(const CCPoint &cell);
     
 #pragma mark - SSnakeEnviromentInterface

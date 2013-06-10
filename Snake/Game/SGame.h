@@ -33,6 +33,7 @@ public:
     void Init();
 
     void StartNewSession();
+    void AbortCurrentSession();
     
 #pragma mark - DisplayInputDelegate
     

@@ -16,7 +16,7 @@ class SGameField;
 class SSnake;
 class SGameSessionDelegate;
 
-class SGameSession {
+class SGameSession : public CCObject {
     
     SGameField  *_gameField;
     SSnake      *_snake;
@@ -24,12 +24,22 @@ class SGameSession {
     CCNode      *_baseNode;
     CCNode      *_snakeNode;
     
+    bool _started;
+    
+    void StartTimer();
+    void StopTimer();
+    void OnTimer(float delta);
+    
+    int _score;
+    
 public:
     
     SGameSessionDelegate *_delegate_w;
     
     SGameSession();
     ~SGameSession();
+    
+    void Start();
     
     void ProcessAction(int actionCode);
     void Update();

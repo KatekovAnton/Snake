@@ -7,6 +7,7 @@
 //
 
 #include "SSnakeData.h"
+#include "SSnakeEnviromentInterface.h"
 
 SSnakeData::SSnakeData(int startLenght, const CCPoint &startPosition, const SnakeDirection startDirection, SSnakeEnviromentInterface   *enviroment)
 :_enviroment_w(enviroment), _position(startPosition), _direction(startDirection)
@@ -43,6 +44,10 @@ SSnakeData::~SSnakeData()
 
 void SSnakeData::MakeAdvance()
 {
+    if (!CanMakeAdvance()) 
+        return;
+    
+    
     _cells.erase(_cells.end() - 1);
     CCPoint newPoint = _cells[0];
     switch (_direction) {
@@ -62,14 +67,41 @@ void SSnakeData::MakeAdvance()
         default:
             break;
     }
+    
     _cells.insert(_cells.begin(), newPoint);
+    
 }
 
 bool SSnakeData::CanMakeAdvance()
 {
-    
-    
+    CCPoint newPoint = _cells[0];
+    switch (_direction) {
+        case SnakeDirection_Up:
+            newPoint.y += 1;
+            break;
+        case SnakeDirection_Down:
+            newPoint.y -= 1;
+            break;
+        case SnakeDirection_Right:
+            newPoint.x += 1;
+            break;
+        case SnakeDirection_Left:
+            newPoint.x -= 1;
+            break;
+            
+        default:
+            break;
+    }
+    if (!_enviroment_w->IsCellValid(newPoint)) {
+        return false;
+    }
+    for (int i = 0; i < _cells.size(); i++) {
+        CCPoint p = _cells[i];
+        if ((int)p.x == (int)newPoint.x && (int)p.y == (int)newPoint.y) 
+            return false;
+    }
     return true;
+    
 }
 
 void SSnakeData::IncreaseLenght()
