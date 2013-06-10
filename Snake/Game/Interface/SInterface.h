@@ -14,12 +14,33 @@
 
 using namespace cocos2d;
 
-class GameInterface : public CCScene {
+class SInterfaceDelegate;
+
+class SInterface : public CCScene {
+    
+    CCNode      *_nodeStart;
+    CCMenuItem  *_startButton;
+    
+    CCNode      *_nodeGame;
+    CCLabelTTF  *_labelScore;
+    
+    CCNode      *_nodeFinish;
+    CCLabelTTF  *_labelText;
+    CCLabelTTF  *_labelFinalScore;
+    CCMenuItem  *_restartButton;
     
 public:
     
-    GameInterface();
-    ~GameInterface();
+    SInterfaceDelegate *_delegate_w;
+    
+    SInterface();
+    ~SInterface();
+    
+    void UpdateGameScore(int newScore);
+    
+    void ToStartState();
+    void ToGameState();
+    void ToFinishState(int score);
     
 };
 

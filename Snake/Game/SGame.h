@@ -20,12 +20,14 @@ typedef enum {
 } SGameState;
 
 class SGameSession;
+class SInterface;
 
 class SGame : public DisplayInputDelegate, public SGameSessionDelegate {
     
 public:
     
-    SGameSession *_currentSession;
+    SGameSession    *_currentSession;
+    SInterface      *_gameInterface;
     
     SGame();
     ~SGame();
@@ -41,9 +43,9 @@ public:
     virtual void ProcessAction(int actionCode);
     
 #pragma mark - SGameSessionDelegate 
-
-    virtual void SessionDidFinishFail(int score);
-    virtual void SessionDidFinishSuccess(int score);
+    
+    virtual void SessionScoreChanged(int score);
+    virtual void SessionDidFinish(int score);
     
 };
 

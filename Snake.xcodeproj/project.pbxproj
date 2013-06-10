@@ -51,6 +51,7 @@
 
 /* Begin PBXFileReference section */
 		8B275E6917652EF400C9E329 /* SGameSessionDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SGameSessionDelegate.h; sourceTree = "<group>"; };
+		8B275E6D17667A8C00C9E329 /* SInterfaceDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SInterfaceDelegate.h; sourceTree = "<group>"; };
 		8B9CCD34175FD56B00D64BCC /* Snake.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Snake.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8B9CCD37175FD56B00D64BCC /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		8B9CCD39175FD56B00D64BCC /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -327,6 +328,7 @@
 			children = (
 				8BFA4F071763B8B8001A7D00 /* SInterface.cpp */,
 				8BFA4F081763B8B8001A7D00 /* SInterface.h */,
+				8B275E6D17667A8C00C9E329 /* SInterfaceDelegate.h */,
 			);
 			path = Interface;
 			sourceTree = "<group>";

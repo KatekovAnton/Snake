@@ -13,8 +13,8 @@ class SGameSessionDelegate {
     
 public:
     
-    virtual void SessionDidFinishFail(int score) = 0;
-    virtual void SessionDidFinishSuccess(int score) = 0;
+    virtual void SessionScoreChanged(int score) = 0;
+    virtual void SessionDidFinish(int score) = 0;
     
 };
 

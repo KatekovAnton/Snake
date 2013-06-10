@@ -58,6 +58,7 @@ void SGameSession::OnTimer(float delta)
 void SGameSession::Start()
 {
     StartTimer();
+    _delegate_w->SessionScoreChanged(_score);
 }
 
 void SGameSession::ProcessAction(int actionCode)
@@ -70,7 +71,7 @@ void SGameSession::Update()
     if (_snake->Update())
         _snake->UpdateView();
     else
-        _delegate_w->SessionDidFinishFail(_score);
+        _delegate_w->SessionDidFinish(_score);
 }
 
 

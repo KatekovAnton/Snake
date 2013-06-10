@@ -10,6 +10,7 @@
 #include "Display.h"
 #include "cocos2d.h"
 #include "SGameSession.h"
+#include "SInterface.h"
 
 SGame globalGame;
 SGame * game = &globalGame;
@@ -23,13 +24,12 @@ SGame::~SGame()
 void SGame::Init()
 {
     Display::currentDisplay()->SetPinchDelegate(this);
-    CCScene* scene = CCScene::create();
-    scene->setPosition(ccp(0, 0));
-    scene->setAnchorPoint(ccp(0, 0));
-    scene->setContentSize(CCDirector::sharedDirector()->getVisibleSize());
-    CCDirector::sharedDirector()->pushScene(scene);
+ 
+    _gameInterface = new SInterface();
+    _gameInterface->ToStartState();
+    CCDirector::sharedDirector()->pushScene(_gameInterface);
     CCDirector::sharedDirector()->mainLoop();
-    StartNewSession();
+    
 }
 
 void SGame::StartNewSession()
@@ -39,6 +39,12 @@ void SGame::StartNewSession()
     _currentSession = new SGameSession();
     _currentSession->_delegate_w = this;
     _currentSession->Start();
+}
+
+void SGame::AbortCurrentSession()
+{
+    delete _currentSession;
+    _currentSession = NULL;
 }
 
 #pragma mark - DisplayInputDelegate
@@ -55,18 +61,14 @@ void SGame::ProcessAction(int actionCode)
 
 #pragma mark - SGameSessionDelegate
 
-void SGame::AbortCurrentSession()
+void SGame::SessionScoreChanged(int score)
 {
-    delete _currentSession;
+    _gameInterface->UpdateGameScore(score);
 }
 
-void SGame::SessionDidFinishFail(int score)
+void SGame::SessionDidFinish(int score)
 {
     AbortCurrentSession();
-}
-
-void SGame::SessionDidFinishSuccess(int score)
-{
-    AbortCurrentSession();
+    _gameInterface->ToFinishState(score);
 }
 
