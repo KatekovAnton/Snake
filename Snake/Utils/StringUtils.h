@@ -10,25 +10,10 @@
 #define __MAX__StringUtils__
 
 #include <iostream>
-#include "miniPrefix.h"
+#include <string>
 
-
-std::vector<std::string> &split(const std::string &s, char delim, std::vector<std::string> &elems);
-
-void split1(const string& str, const string& delimiters , vector<string>& tokens);
-
-std::vector<std::string> splitString(const std::string &s, char delim);
-
-std::vector<std::string> splitString(const std::string &s, string delim);
-
-std::vector<std::string> getElements(string value);
-
-vector<string> removeCommentsAndEmptyStrings(vector<string> lines);
+using namespace std;
 
 string intToString(int value);
-
-void removeBadCharacters(std::string &param);
-
-string toLower(string value);
 
 #endif /* defined(__MAX__StringUtils__) */
