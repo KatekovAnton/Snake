@@ -26,7 +26,7 @@ void SGame::Init()
     CCScene* scene = CCScene::create();
     scene->setPosition(ccp(0, 0));
     scene->setAnchorPoint(ccp(0, 0));
-    scene->setContentSize(Display::currentDisplay()->getFrameSize());
+    scene->setContentSize(CCDirector::sharedDirector()->getVisibleSize());
     CCDirector::sharedDirector()->pushScene(scene);
     CCDirector::sharedDirector()->mainLoop();
     StartNewSession();
