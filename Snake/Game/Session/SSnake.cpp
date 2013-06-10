@@ -11,12 +11,11 @@
 #include "SGameField.h"
 
 const int startLength = 4;
-const int increaseLength = 1;
 
 SSnake::SSnake(SGameField *gameField, CCNode *node)
 :_node(node), _gameField_w(gameField)
 {
-    _data = new SSnakeData(startLength, increaseLength, ccp(10, 10), SnakeDirection_Up, gameField);
+    _data = new SSnakeData(startLength, ccp(10, 10), SnakeDirection_Up, gameField);
     _sprites = CCArray::create();
     _sprites->retain();
     UpdateView();

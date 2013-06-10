@@ -19,18 +19,15 @@ class SSnakeData {
     SSnakeEnviromentInterface   *_enviroment_w;
     
     vector<CCPoint> _cells;
-    vector<CCPoint> _trace;
     
     CCPoint         _position;
     SnakeDirection  _direction;
-    
-    int             _increaseLengthStep;
     
 public:
     
     const vector<CCPoint> GetCells() const { return _cells; };
     
-    SSnakeData(int startLenght, int increaseLenghtStep, const CCPoint &startPosition, const SnakeDirection startDirection, SSnakeEnviromentInterface   *enviroment);
+    SSnakeData(int startLenght, const CCPoint &startPosition, const SnakeDirection startDirection, SSnakeEnviromentInterface   *enviroment);
     ~SSnakeData();
     
     void MakeAdvance();

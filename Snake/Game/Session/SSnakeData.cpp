@@ -8,8 +8,8 @@
 
 #include "SSnakeData.h"
 
-SSnakeData::SSnakeData(int startLenght, int increaseLenghtStep, const CCPoint &startPosition, const SnakeDirection startDirection, SSnakeEnviromentInterface   *enviroment)
-:_enviroment_w(enviroment), _position(startPosition), _direction(startDirection), _increaseLengthStep(increaseLenghtStep)
+SSnakeData::SSnakeData(int startLenght, const CCPoint &startPosition, const SnakeDirection startDirection, SSnakeEnviromentInterface   *enviroment)
+:_enviroment_w(enviroment), _position(startPosition), _direction(startDirection)
 {
     CCPoint point = startPosition;
     float dx = 0;
