@@ -40,7 +40,7 @@ SGameSession::~SGameSession()
 void SGameSession::StartTimer()
 {
     StopTimer();
-    CCDirector::sharedDirector()->getScheduler()->scheduleSelector(schedule_selector(SGameSession::OnTimer), this, 1, false);
+    CCDirector::sharedDirector()->getScheduler()->scheduleSelector(schedule_selector(SGameSession::OnTimer), this, 0.5, false);
     _started = true;
 }
 

@@ -37,3 +37,24 @@ CCSize CocosHelper::GetContentSize(CCNode* node)
 {
     return CCSize(node->getContentSize().width*node->getScale(), node->getContentSize().height*node->getScale());
 }
+
+void CocosHelper::MoveNode(CCNode* node, const CCPoint &vector)
+{
+    if (!node)
+        return;
+    
+    CCPoint pos = node->getPosition();
+    pos.x += vector.x;
+    pos.y += vector.y;
+    node->setPosition(pos);
+}
+
+void CocosHelper::PlaceNodeToTheCenterOfParent(CCNode* node)
+{
+    if (!node->getParent()) 
+        return;
+    
+    CCSize sz = node->getParent()->getContentSize();
+    node->setAnchorPoint(ccp(0.5, 0.5));
+    node->setPosition(ccp(sz.width/2, sz.height/2));
+}

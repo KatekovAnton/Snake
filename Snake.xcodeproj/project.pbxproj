@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8B275E721766892900C9E329 /* StringUtils.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8B275E701766892900C9E329 /* StringUtils.cpp */; };
 		8B9CCD38175FD56B00D64BCC /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8B9CCD37175FD56B00D64BCC /* UIKit.framework */; };
 		8B9CCD3A175FD56B00D64BCC /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8B9CCD39175FD56B00D64BCC /* Foundation.framework */; };
 		8B9CCD3C175FD56B00D64BCC /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8B9CCD3B175FD56B00D64BCC /* CoreGraphics.framework */; };
@@ -52,6 +53,8 @@
 /* Begin PBXFileReference section */
 		8B275E6917652EF400C9E329 /* SGameSessionDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SGameSessionDelegate.h; sourceTree = "<group>"; };
 		8B275E6D17667A8C00C9E329 /* SInterfaceDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SInterfaceDelegate.h; sourceTree = "<group>"; };
+		8B275E701766892900C9E329 /* StringUtils.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = StringUtils.cpp; sourceTree = "<group>"; };
+		8B275E711766892900C9E329 /* StringUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StringUtils.h; sourceTree = "<group>"; };
 		8B9CCD34175FD56B00D64BCC /* Snake.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Snake.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8B9CCD37175FD56B00D64BCC /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		8B9CCD39175FD56B00D64BCC /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -217,6 +220,8 @@
 			children = (
 				8BFA4EA617612DB2001A7D00 /* MathKit */,
 				8BFA4EA517612DA2001A7D00 /* GlobalConstants.h */,
+				8B275E701766892900C9E329 /* StringUtils.cpp */,
+				8B275E711766892900C9E329 /* StringUtils.h */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -440,6 +445,7 @@
 				8BFA4F091763B8B8001A7D00 /* SInterface.cpp in Sources */,
 				8BFA4F1817650B62001A7D00 /* SGameFieldData.cpp in Sources */,
 				8BFA4F1B17650B7A001A7D00 /* SSnakeData.cpp in Sources */,
+				8B275E721766892900C9E329 /* StringUtils.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

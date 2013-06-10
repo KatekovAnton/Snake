@@ -12,6 +12,7 @@
 #include <iostream>
 #include "DisplayInputDelegate.h"
 #include "SGameSessionDelegate.h"
+#include "SInterfaceDelegate.h"
 
 typedef enum {
     SGameState_Menu,
@@ -22,7 +23,7 @@ typedef enum {
 class SGameSession;
 class SInterface;
 
-class SGame : public DisplayInputDelegate, public SGameSessionDelegate {
+class SGame : public DisplayInputDelegate, public SGameSessionDelegate, public SInterfaceDelegate {
     
 public:
     
@@ -47,6 +48,10 @@ public:
     virtual void SessionScoreChanged(int score);
     virtual void SessionDidFinish(int score);
     
+#pragma mark - SInterfaceDelegate 
+
+    virtual void OnStartSession();
+
 };
 
 extern SGame *  game;

@@ -26,6 +26,7 @@ void SGame::Init()
     Display::currentDisplay()->SetPinchDelegate(this);
  
     _gameInterface = new SInterface();
+    _gameInterface->_delegate_w = this;
     _gameInterface->ToStartState();
     CCDirector::sharedDirector()->pushScene(_gameInterface);
     CCDirector::sharedDirector()->mainLoop();
@@ -51,7 +52,7 @@ void SGame::AbortCurrentSession()
 
 bool SGame::CanStartScreenInput(float x, float y)
 {
-    return true;
+    return _currentSession!=NULL;
 }
 
 void SGame::ProcessAction(int actionCode)
@@ -70,5 +71,13 @@ void SGame::SessionDidFinish(int score)
 {
     AbortCurrentSession();
     _gameInterface->ToFinishState(score);
+}
+
+#pragma mark - SInterfaceDelegate
+
+void SGame::OnStartSession()
+{
+    StartNewSession();
+    _gameInterface->ToGameState();
 }
 

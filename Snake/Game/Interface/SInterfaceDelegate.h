@@ -13,7 +13,7 @@ class SInterfaceDelegate {
     
 public:
     
-    void OnStartSession();
+    virtual void OnStartSession() = 0;
     
 };
 

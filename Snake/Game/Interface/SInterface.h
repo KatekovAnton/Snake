@@ -19,7 +19,8 @@ class SInterfaceDelegate;
 class SInterface : public CCScene {
     
     CCNode      *_nodeStart;
-    CCMenuItem  *_startButton;
+    CCMenu      *_menuStart;
+    CCMenuItem  *_buttonStart;
     
     CCNode      *_nodeGame;
     CCLabelTTF  *_labelScore;
@@ -27,7 +28,8 @@ class SInterface : public CCScene {
     CCNode      *_nodeFinish;
     CCLabelTTF  *_labelText;
     CCLabelTTF  *_labelFinalScore;
-    CCMenuItem  *_restartButton;
+    CCMenu      *_menuRestart;
+    CCMenuItem  *_buttonRestart;
     
 public:
     
@@ -41,6 +43,9 @@ public:
     void ToStartState();
     void ToGameState();
     void ToFinishState(int score);
+    
+#pragma mark - button actions
+    void OnStartNewSession(CCObject* sender);
     
 };
 
