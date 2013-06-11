@@ -132,7 +132,10 @@ void SGameSession::Update()
     if (_snake->Update(_target->GetPosition()))
         _snake->UpdateView();
     else
+	{
+		StopTimer();
         _delegate_w->SessionDidFinish(_score);
+	}
 }
 
 #pragma mark - SSnakeDelegate

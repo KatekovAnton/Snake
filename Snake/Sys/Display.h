@@ -9,18 +9,9 @@
 #ifndef __Snake__Display__
 #define __Snake__Display__
 #include "GlobalConstants.h"
-#ifdef TARGET_OS_IPHONE
-#include GLES2
-#endif
 
-#ifdef TARGET_OS_WIN
-#include <windows.h>
-#include "glew.h"
-#include "glext.h"
-#include "wchar.h"
-#include <GL/gl.h>
-#include <GL/glu.h>
-#endif
+
+
 #include "DisplayInputDelegate.h"
 #include <iostream>
 #include "platform/CCEGLViewProtocol.h"

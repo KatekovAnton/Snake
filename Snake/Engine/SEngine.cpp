@@ -14,7 +14,6 @@
 #include "cocos2d.h"
 #include "RenderSystem.h"
 #include "Display.h"
-#include "Geometry.h"
 
 using namespace cocos2d;
 
