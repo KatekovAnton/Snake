@@ -217,7 +217,7 @@ public:
     /** Returns whether or not the target is paused
     @since v1.0.0
     */
-    bool isTargetPaused(CCObject *pTarget);
+    bool iSSnakeTargetPaused(CCObject *pTarget);
 
     /** Pause all selectors from all targets.
       You should NEVER call this method, unless you know what you are doing.

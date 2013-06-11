@@ -30,11 +30,11 @@ public:
     SSnakeData(int startLenght, const CCPoint &startPosition, const SnakeDirection startDirection, SSnakeEnviromentInterface   *enviroment);
     ~SSnakeData();
     
-    void MakeAdvance();
+    void MakeAdvance(bool increase);
     bool CanMakeAdvance();
     
-    void IncreaseLenght();
-    bool CanIncreaseLenght();
+    bool CellIsSnakeCell(const CCPoint &cell) const;
+    CCPoint NextCell();
     
     void ChangeDirection(SnakeDirection newDirection);
     bool CanChangeDirection(SnakeDirection newDirection);

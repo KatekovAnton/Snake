@@ -677,7 +677,7 @@ void CCScheduler::pauseTarget(CCObject *pTarget)
     }
 }
 
-bool CCScheduler::isTargetPaused(CCObject *pTarget)
+bool CCScheduler::iSSnakeTargetPaused(CCObject *pTarget)
 {
     CCAssert( pTarget != NULL, "target must be non nil" );
 

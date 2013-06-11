@@ -15,6 +15,7 @@
 class SSnakeData;
 class SSnakeEnviromentInterface;
 class SGameField;
+class SSnakeDelegate;
 
 class SSnake {
     
@@ -26,6 +27,7 @@ class SSnake {
     
 public:
     
+    SSnakeDelegate *_delegate_w;
     SSnakeData *GetData() const {return _data;};
     
     
@@ -34,7 +36,7 @@ public:
     
     void Hide();
     
-    bool Update();
+    bool Update(const CCPoint &targetCell);
     void UpdateView();
     void ProcessInputCommand(int command);
 };

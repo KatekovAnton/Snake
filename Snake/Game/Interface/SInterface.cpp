@@ -191,6 +191,8 @@ void SInterface::ToFinishState(int score)
         _nodeFinish->removeFromParentAndCleanup(true);
         addChild(_nodeFinish);
     }
+    
+    _labelFinalScore->setString(intToString(score).c_str());
 }
 
 #pragma mark - button actions

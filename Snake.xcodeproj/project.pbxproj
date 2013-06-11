@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		8B275E721766892900C9E329 /* StringUtils.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8B275E701766892900C9E329 /* StringUtils.cpp */; };
+		8B275E7B1767BE1500C9E329 /* SSnakeTarget.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8B275E791767BE1300C9E329 /* SSnakeTarget.cpp */; };
 		8B9CCD38175FD56B00D64BCC /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8B9CCD37175FD56B00D64BCC /* UIKit.framework */; };
 		8B9CCD3A175FD56B00D64BCC /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8B9CCD39175FD56B00D64BCC /* Foundation.framework */; };
 		8B9CCD3C175FD56B00D64BCC /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8B9CCD3B175FD56B00D64BCC /* CoreGraphics.framework */; };
@@ -55,6 +56,10 @@
 		8B275E6D17667A8C00C9E329 /* SInterfaceDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SInterfaceDelegate.h; sourceTree = "<group>"; };
 		8B275E701766892900C9E329 /* StringUtils.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = StringUtils.cpp; sourceTree = "<group>"; };
 		8B275E711766892900C9E329 /* StringUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StringUtils.h; sourceTree = "<group>"; };
+		8B275E751767BA0D00C9E329 /* SSnakeDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SSnakeDelegate.h; sourceTree = "<group>"; };
+		8B275E791767BE1300C9E329 /* SSnakeTarget.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = SSnakeTarget.cpp; sourceTree = "<group>"; };
+		8B275E7A1767BE1300C9E329 /* SSnakeTarget.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SSnakeTarget.h; sourceTree = "<group>"; };
+		8B275E7D1767C7BA00C9E329 /* MyRandom.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyRandom.h; sourceTree = "<group>"; };
 		8B9CCD34175FD56B00D64BCC /* Snake.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Snake.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8B9CCD37175FD56B00D64BCC /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		8B9CCD39175FD56B00D64BCC /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -220,6 +225,7 @@
 			children = (
 				8BFA4EA617612DB2001A7D00 /* MathKit */,
 				8BFA4EA517612DA2001A7D00 /* GlobalConstants.h */,
+				8B275E7D1767C7BA00C9E329 /* MyRandom.h */,
 				8B275E701766892900C9E329 /* StringUtils.cpp */,
 				8B275E711766892900C9E329 /* StringUtils.h */,
 			);
@@ -319,10 +325,13 @@
 				8BFA4F1717650B61001A7D00 /* SGameFieldData.h */,
 				8BFA4EFF1763B269001A7D00 /* SGameField.cpp */,
 				8BFA4F001763B269001A7D00 /* SGameField.h */,
+				8B275E791767BE1300C9E329 /* SSnakeTarget.cpp */,
+				8B275E7A1767BE1300C9E329 /* SSnakeTarget.h */,
 				8BFA4F1917650B77001A7D00 /* SSnakeData.cpp */,
 				8BFA4F1A17650B78001A7D00 /* SSnakeData.h */,
 				8BFA4F021763B275001A7D00 /* SSnake.cpp */,
 				8BFA4F031763B276001A7D00 /* SSnake.h */,
+				8B275E751767BA0D00C9E329 /* SSnakeDelegate.h */,
 				8BFA4F1D17651AB4001A7D00 /* SSnakeEnviromentInterface.h */,
 			);
 			path = Session;
@@ -446,6 +455,7 @@
 				8BFA4F1817650B62001A7D00 /* SGameFieldData.cpp in Sources */,
 				8BFA4F1B17650B7A001A7D00 /* SSnakeData.cpp in Sources */,
 				8B275E721766892900C9E329 /* StringUtils.cpp in Sources */,
+				8B275E7B1767BE1500C9E329 /* SSnakeTarget.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

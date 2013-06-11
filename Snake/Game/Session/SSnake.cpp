@@ -9,11 +9,12 @@
 #include "SSnake.h"
 #include "SSnakeData.h"
 #include "SGameField.h"
+#include "SSnakeDelegate.h"
 
 const int startLength = 4;
 
 SSnake::SSnake(SGameField *gameField, CCNode *node)
-:_node(node), _gameField_w(gameField)
+:_node(node), _gameField_w(gameField), _delegate_w(NULL)
 {
     _data = new SSnakeData(startLength, ccp(10, 10), SnakeDirection_Up, gameField);
     _sprites = CCArray::create();
@@ -39,11 +40,16 @@ void SSnake::Hide()
     _sprites = NULL;
 }
 
-bool SSnake::Update()
+bool SSnake::Update(const CCPoint &targetCell)
 {
     if (_data->CanMakeAdvance())
     {
-        _data->MakeAdvance();
+        CCPoint newxtCell = _data->NextCell();
+        bool increase = newxtCell.equals(targetCell);
+        _data->MakeAdvance(increase);
+        if (increase && _delegate_w)
+            _delegate_w->SnakeDidIncreaseLength();
+        
         return true;
     }
     else

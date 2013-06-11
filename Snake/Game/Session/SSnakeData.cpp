@@ -42,38 +42,45 @@ SSnakeData::SSnakeData(int startLenght, const CCPoint &startPosition, const Snak
 SSnakeData::~SSnakeData()
 {}
 
-void SSnakeData::MakeAdvance()
+void SSnakeData::MakeAdvance(bool increase)
 {
     if (!CanMakeAdvance()) 
         return;
     
+    if (!increase) 
+        _cells.erase(_cells.end() - 1);
     
-    _cells.erase(_cells.end() - 1);
-    CCPoint newPoint = _cells[0];
-    switch (_direction) {
-        case SnakeDirection_Up:
-            newPoint.y += 1;
-            break;
-        case SnakeDirection_Down:
-            newPoint.y -= 1;
-            break;
-        case SnakeDirection_Right:
-            newPoint.x += 1;
-            break;
-        case SnakeDirection_Left:
-            newPoint.x -= 1;
-            break;
-            
-        default:
-            break;
-    }
-    
+    CCPoint newPoint = NextCell();
     _cells.insert(_cells.begin(), newPoint);
     
 }
 
 bool SSnakeData::CanMakeAdvance()
 {
+    CCPoint newPoint = NextCell();
+    
+    if (!_enviroment_w->IsCellValid(newPoint))
+        return false;
+    
+    if (CellIsSnakeCell(newPoint)) 
+        return false;
+    
+    return true;
+    
+}
+
+bool SSnakeData::CellIsSnakeCell(const CCPoint &cell) const
+{
+    for (int i = 0; i < _cells.size(); i++) {
+        CCPoint p = _cells[i];
+        if ((int)p.x == (int)cell.x && (int)p.y == (int)cell.y)
+            return true;
+    }
+    return false;
+}
+
+CCPoint SSnakeData::NextCell()
+{
     CCPoint newPoint = _cells[0];
     switch (_direction) {
         case SnakeDirection_Up:
@@ -92,26 +99,7 @@ bool SSnakeData::CanMakeAdvance()
         default:
             break;
     }
-    if (!_enviroment_w->IsCellValid(newPoint)) {
-        return false;
-    }
-    for (int i = 0; i < _cells.size(); i++) {
-        CCPoint p = _cells[i];
-        if ((int)p.x == (int)newPoint.x && (int)p.y == (int)newPoint.y) 
-            return false;
-    }
-    return true;
-    
-}
-
-void SSnakeData::IncreaseLenght()
-{
-    
-}
-
-bool SSnakeData::CanIncreaseLenght()
-{
-    return true;
+    return newPoint;
 }
 
 void SSnakeData::ChangeDirection(SnakeDirection newDirection)

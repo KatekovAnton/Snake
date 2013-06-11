@@ -329,8 +329,8 @@
 		1551A37A158F2ADE00E66CFE /* CCDirector.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCDirector.h; sourceTree = "<group>"; };
 		1551A37B158F2ADE00E66CFE /* CCDrawingPrimitives.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = CCDrawingPrimitives.cpp; sourceTree = "<group>"; };
 		1551A37C158F2ADE00E66CFE /* CCDrawingPrimitives.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCDrawingPrimitives.h; sourceTree = "<group>"; };
-		1551A37D158F2ADE00E66CFE /* CCScheduler.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = CCScheduler.cpp; sourceTree = "<group>"; };
-		1551A37E158F2ADE00E66CFE /* CCScheduler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCScheduler.h; sourceTree = "<group>"; };
+		1551A37D158F2ADE00E66CFE /* CCScheduler.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; lineEnding = 0; path = CCScheduler.cpp; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.cpp; };
+		1551A37E158F2ADE00E66CFE /* CCScheduler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = CCScheduler.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
 		1551A380158F2ADE00E66CFE /* CCAffineTransform.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = CCAffineTransform.cpp; sourceTree = "<group>"; };
 		1551A381158F2ADE00E66CFE /* CCAffineTransform.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCAffineTransform.h; sourceTree = "<group>"; };
 		1551A382158F2ADE00E66CFE /* CCArray.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = CCArray.cpp; sourceTree = "<group>"; };
