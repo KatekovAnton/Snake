@@ -133,6 +133,29 @@ void windows_display::ProceedMessage(MSG msg)
 			this->handleTouchesBegin(1, ids, xs, ys); 
 		}
 	}
+	if (msg.message == WM_KEYDOWN && _delegateC->CanStartScreenInput(0,0))
+	{
+		switch (msg.wParam) {
+			case VK_UP:
+			{
+				_delegateC->ProcessAction(0);
+			} break; 
+			case VK_RIGHT:
+			{
+				_delegateC->ProcessAction(1);
+			} break; 
+			case VK_DOWN:
+			{
+				_delegateC->ProcessAction(2);
+			} break; 
+			case VK_LEFT:
+			{
+				_delegateC->ProcessAction(3);
+			} break; 
+			default:
+				break;
+		}
+	}
 	if (msg.message == WM_LBUTTONUP)
 	{
 		if (_mouseDown)
