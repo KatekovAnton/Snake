@@ -75,19 +75,6 @@
 		8BFA4E9917612C11001A7D00 /* Display.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Display.cpp; sourceTree = "<group>"; };
 		8BFA4E9D17612C11001A7D00 /* DisplayInputDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DisplayInputDelegate.h; sourceTree = "<group>"; };
 		8BFA4EA517612DA2001A7D00 /* GlobalConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GlobalConstants.h; sourceTree = "<group>"; };
-		8BFA4EA717612DC1001A7D00 /* Matrix.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Matrix.h; sourceTree = "<group>"; };
-		8BFA4EA817612DC1001A7D00 /* MyMath.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyMath.h; sourceTree = "<group>"; };
-		8BFA4EA917612DC1001A7D00 /* GLKMath.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GLKMath.h; sourceTree = "<group>"; };
-		8BFA4EAA17612DC1001A7D00 /* GLKMathTypes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GLKMathTypes.h; sourceTree = "<group>"; };
-		8BFA4EAB17612DC1001A7D00 /* GLKMathUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GLKMathUtils.h; sourceTree = "<group>"; };
-		8BFA4EAC17612DC1001A7D00 /* GLKMatrix3.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GLKMatrix3.h; sourceTree = "<group>"; };
-		8BFA4EAD17612DC1001A7D00 /* GLKMatrix4.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GLKMatrix4.h; sourceTree = "<group>"; };
-		8BFA4EAE17612DC1001A7D00 /* GLKMatrixStack.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GLKMatrixStack.h; sourceTree = "<group>"; };
-		8BFA4EAF17612DC1001A7D00 /* GLKQuaternion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GLKQuaternion.h; sourceTree = "<group>"; };
-		8BFA4EB017612DC1001A7D00 /* GLKVector2.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GLKVector2.h; sourceTree = "<group>"; };
-		8BFA4EB117612DC1001A7D00 /* GLKVector3.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GLKVector3.h; sourceTree = "<group>"; };
-		8BFA4EB217612DC1001A7D00 /* GLKVector4.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GLKVector4.h; sourceTree = "<group>"; };
-		8BFA4EB317612DC1001A7D00 /* Geometry.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Geometry.h; sourceTree = "<group>"; };
 		8BFA4EB517612EDA001A7D00 /* cocos2dx.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = cocos2dx.xcodeproj; path = "cocos2d-2.0-x-2.0.4/cocos2dx/proj.ios/cocos2dx.xcodeproj"; sourceTree = "<group>"; };
 		8BFA4EBC17612F04001A7D00 /* CocosHelper.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = CocosHelper.cpp; sourceTree = "<group>"; };
 		8BFA4EBD17612F04001A7D00 /* CocosHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CocosHelper.h; sourceTree = "<group>"; };
@@ -223,33 +210,12 @@
 		8BFA4EA217612D4C001A7D00 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
-				8BFA4EA617612DB2001A7D00 /* MathKit */,
 				8BFA4EA517612DA2001A7D00 /* GlobalConstants.h */,
 				8B275E7D1767C7BA00C9E329 /* MyRandom.h */,
 				8B275E701766892900C9E329 /* StringUtils.cpp */,
 				8B275E711766892900C9E329 /* StringUtils.h */,
 			);
 			path = Utils;
-			sourceTree = "<group>";
-		};
-		8BFA4EA617612DB2001A7D00 /* MathKit */ = {
-			isa = PBXGroup;
-			children = (
-				8BFA4EA717612DC1001A7D00 /* Matrix.h */,
-				8BFA4EA817612DC1001A7D00 /* MyMath.h */,
-				8BFA4EA917612DC1001A7D00 /* GLKMath.h */,
-				8BFA4EAA17612DC1001A7D00 /* GLKMathTypes.h */,
-				8BFA4EAB17612DC1001A7D00 /* GLKMathUtils.h */,
-				8BFA4EAC17612DC1001A7D00 /* GLKMatrix3.h */,
-				8BFA4EAD17612DC1001A7D00 /* GLKMatrix4.h */,
-				8BFA4EAE17612DC1001A7D00 /* GLKMatrixStack.h */,
-				8BFA4EAF17612DC1001A7D00 /* GLKQuaternion.h */,
-				8BFA4EB017612DC1001A7D00 /* GLKVector2.h */,
-				8BFA4EB117612DC1001A7D00 /* GLKVector3.h */,
-				8BFA4EB217612DC1001A7D00 /* GLKVector4.h */,
-				8BFA4EB317612DC1001A7D00 /* Geometry.h */,
-			);
-			path = MathKit;
 			sourceTree = "<group>";
 		};
 		8BFA4EB417612E1C001A7D00 /* Vendors */ = {
