@@ -1,0 +1,185 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="Sys">
+      <UniqueIdentifier>{c3a4c4af-99db-42ad-849a-7cc8e3501038}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Sys\Windows">
+      <UniqueIdentifier>{52881cc1-5e78-4c48-a212-fac9209f132f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Engine">
+      <UniqueIdentifier>{2fcc1d21-00ba-404e-b720-e81b9265f884}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Game">
+      <UniqueIdentifier>{1ed968d3-ee38-4225-bc57-1d062b00dedc}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Game\Interface">
+      <UniqueIdentifier>{0c2e7368-72fa-4eab-b0c6-94b588df72e7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Game\Session">
+      <UniqueIdentifier>{c305aebd-fcae-408f-a27a-74fc80422937}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Utils">
+      <UniqueIdentifier>{fa65890a-61fd-4fa2-a648-bb0e37ca7959}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Vendors">
+      <UniqueIdentifier>{c1127b42-97e8-4cd1-8841-a2e24019e9b4}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\main.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Sys\Windows\windows_display.cpp">
+      <Filter>Sys\Windows</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Snake\Sys\Display.cpp">
+      <Filter>Sys</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Snake\Engine\RenderSystem.cpp">
+      <Filter>Engine</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Snake\Engine\SEngine.cpp">
+      <Filter>Engine</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Snake\Game\SGame.cpp">
+      <Filter>Game</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Snake\Game\Interface\SInterface.cpp">
+      <Filter>Game\Interface</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Snake\Game\Session\SGameField.cpp">
+      <Filter>Game\Session</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Snake\Game\Session\SGameFieldData.cpp">
+      <Filter>Game\Session</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Snake\Game\Session\SGameSession.cpp">
+      <Filter>Game\Session</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Snake\Game\Session\SSnake.cpp">
+      <Filter>Game\Session</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Snake\Game\Session\SSnakeData.cpp">
+      <Filter>Game\Session</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Snake\Game\Session\SSnakeTarget.cpp">
+      <Filter>Game\Session</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Snake\Utils\StringUtils.cpp">
+      <Filter>Utils</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Snake\Vendors\CocosHelper\CocosHelper.cpp">
+      <Filter>Vendors</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\Sys\Windows\windows_display.h">
+      <Filter>Sys\Windows</Filter>
+    </ClInclude>
+    <ClInclude Include="..\glew.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\header.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\stdbool.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Snake\Sys\Display.h">
+      <Filter>Sys</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Snake\Sys\DisplayInputDelegate.h">
+      <Filter>Sys</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Snake\Engine\RenderSystem.h">
+      <Filter>Engine</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Snake\Engine\SEngine.h">
+      <Filter>Engine</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Snake\Game\SGame.h">
+      <Filter>Game</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Snake\Game\Interface\SInterface.h">
+      <Filter>Game\Interface</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Snake\Game\Interface\SInterfaceDelegate.h">
+      <Filter>Game\Interface</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Snake\Game\Session\SGameField.h">
+      <Filter>Game\Session</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Snake\Game\Session\SGameFieldData.h">
+      <Filter>Game\Session</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Snake\Game\Session\SGameSession.h">
+      <Filter>Game\Session</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Snake\Game\Session\SGameSessionDelegate.h">
+      <Filter>Game\Session</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Snake\Game\Session\SSnake.h">
+      <Filter>Game\Session</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Snake\Game\Session\SSnakeData.h">
+      <Filter>Game\Session</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Snake\Game\Session\SSnakeDelegate.h">
+      <Filter>Game\Session</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Snake\Game\Session\SSnakeEnviromentInterface.h">
+      <Filter>Game\Session</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Snake\Game\Session\SSnakeTarget.h">
+      <Filter>Game\Session</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Snake\Utils\GlobalConstants.h">
+      <Filter>Utils</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Snake\Utils\MyRandom.h">
+      <Filter>Utils</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Snake\Utils\StringUtils.h">
+      <Filter>Utils</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Snake\Vendors\CocosHelper\CocosHelper.h">
+      <Filter>Vendors</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="glew32.dll">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="iconv.dll">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="libcurl.dll">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="libtiff.dll">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="libxml2.dll">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="pthreadVCE2.dll">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="zlib1.dll">
+      <Filter>Resource Files</Filter>
+    </None>
+  </ItemGroup>
+</Project>

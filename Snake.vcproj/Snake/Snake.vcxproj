@@ -1,0 +1,128 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{5B65A286-B5A4-49D0-ACB6-C4285595A48A}</ProjectGuid>
+    <RootNamespace>Snake</RootNamespace>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v110</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v110</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <IncludePath>$(ProjectDir)..\..\Snake\Game\Interface;$(ProjectDir)..\..\Snake\Game\Session\;$(ProjectDir)..\..\Snake\Game;$(ProjectDir)..\..\Snake\Utils;$(ProjectDir)..\..\Snake\Engine;$(ProjectDir)..\..\Snake\Vendors\cocos2d-2.0-x-2.0.4\cocos2dx\kazmath\include;$(ProjectDir)..\..\Snake\Vendors\cocos2d-2.0-x-2.0.4\cocos2dx\effects;$(ProjectDir)..\..\Snake\Vendors\cocos2d-2.0-x-2.0.4\cocos2dx\platform\win32\compat;$(ProjectDir)..\..\Snake\Vendors\cocos2d-2.0-x-2.0.4\cocos2dx\platform\third_party\win32\pthread;$(ProjectDir)..\..\Snake\Vendors\cocos2d-2.0-x-2.0.4\cocos2dx\platform\third_party\win32\curl;$(ProjectDir)..\..\Snake\Vendors\cocos2d-2.0-x-2.0.4\cocos2dx\platform\win32;$(ProjectDir)..\..\Snake\Vendors\cocos2d-2.0-x-2.0.4\cocos2dx\include;$(ProjectDir)..\..\Snake\Vendors\cocos2d-2.0-x-2.0.4\cocos2dx\shaders\;$(ProjectDir)..\..\Snake\Vendors\cocos2d-2.0-x-2.0.4\cocos2dx;$(ProjectDir)..\..\Snake\Vendors\cocos2d-2.0-x-2.0.4\extensions\;$(ProjectDir)..\..\Snake\Vendors\cocos2d-2.0-x-2.0.4\extensions\GUI\CCScrollView;$(ProjectDir)..\..\Snake\Vendors\cocos2d-2.0-x-2.0.4\CocosDenshion\win32;$(ProjectDir)..\..\Snake\Vendors\cocos2d-2.0-x-2.0.4\CocosDenshion\include;$(ProjectDir)..\..\Snake\Vendors\aharren-LibComponentLogging-Core-17e2940;$(ProjectDir)..\..\Snake\Vendors\CocosHelper\;$(ProjectDir)..\..\Snake\Sys;$(ProjectDir)..\..\Snake\;$(ProjectDir)..\Sys\Windows;$(ProjectDir);$(ProjectDir)..;$(IncludePath);$(VCInstallDir)include;$(VCInstallDir)atlmfc\include;$(WindowsSDK_IncludePath)</IncludePath>
+    <LibraryPath>$(ProjectDir)..\Debug.win32;$(LibraryPath)</LibraryPath>
+    <OutDir>$(SolutionDir)$(Configuration).win32\</OutDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <IncludePath>$(ProjectDir)..\..\Snake\Game\Interface;$(ProjectDir)..\..\Snake\Game\Session\;$(ProjectDir)..\..\Snake\Game;$(ProjectDir)..\..\Snake\Utils;$(ProjectDir)..\..\Snake\Engine;$(ProjectDir)..\..\Snake\Vendors\cocos2d-2.0-x-2.0.4\cocos2dx\kazmath\include;$(ProjectDir)..\..\Snake\Vendors\cocos2d-2.0-x-2.0.4\cocos2dx\effects;$(ProjectDir)..\..\Snake\Vendors\cocos2d-2.0-x-2.0.4\cocos2dx\platform\win32\compat;$(ProjectDir)..\..\Snake\Vendors\cocos2d-2.0-x-2.0.4\cocos2dx\platform\third_party\win32\pthread;$(ProjectDir)..\..\Snake\Vendors\cocos2d-2.0-x-2.0.4\cocos2dx\platform\third_party\win32\curl;$(ProjectDir)..\..\Snake\Vendors\cocos2d-2.0-x-2.0.4\cocos2dx\platform\win32;$(ProjectDir)..\..\Snake\Vendors\cocos2d-2.0-x-2.0.4\cocos2dx\include;$(ProjectDir)..\..\Snake\Vendors\cocos2d-2.0-x-2.0.4\cocos2dx\shaders\;$(ProjectDir)..\..\Snake\Vendors\cocos2d-2.0-x-2.0.4\cocos2dx;$(ProjectDir)..\..\Snake\Vendors\cocos2d-2.0-x-2.0.4\extensions\;$(ProjectDir)..\..\Snake\Vendors\cocos2d-2.0-x-2.0.4\extensions\GUI\CCScrollView;$(ProjectDir)..\..\Snake\Vendors\cocos2d-2.0-x-2.0.4\CocosDenshion\win32;$(ProjectDir)..\..\Snake\Vendors\cocos2d-2.0-x-2.0.4\CocosDenshion\include;$(ProjectDir)..\..\Snake\Vendors\aharren-LibComponentLogging-Core-17e2940;$(ProjectDir)..\..\Snake\Vendors\CocosHelper\;$(ProjectDir)..\..\Snake\Sys;$(ProjectDir)..\..\Snake\;$(ProjectDir)Sys\Windows;$(ProjectDir);$(IncludePath);$(VCInstallDir)include;$(VCInstallDir)atlmfc\include;$(WindowsSDK_IncludePath);</IncludePath>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;TARGET_OS_WIN;_UNICODE;UNICODE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>opengl32.lib;glu32.lib;glew32.lib;libcocos2d.lib;winmm.lib;pthreadVCE2.lib;libcurl_imp.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\Snake\Engine\RenderSystem.cpp" />
+    <ClCompile Include="..\..\Snake\Engine\SEngine.cpp" />
+    <ClCompile Include="..\..\Snake\Game\Interface\SInterface.cpp" />
+    <ClCompile Include="..\..\Snake\Game\Session\SGameField.cpp" />
+    <ClCompile Include="..\..\Snake\Game\Session\SGameFieldData.cpp" />
+    <ClCompile Include="..\..\Snake\Game\Session\SGameSession.cpp" />
+    <ClCompile Include="..\..\Snake\Game\Session\SSnake.cpp" />
+    <ClCompile Include="..\..\Snake\Game\Session\SSnakeData.cpp" />
+    <ClCompile Include="..\..\Snake\Game\Session\SSnakeTarget.cpp" />
+    <ClCompile Include="..\..\Snake\Game\SGame.cpp" />
+    <ClCompile Include="..\..\Snake\Sys\Display.cpp" />
+    <ClCompile Include="..\..\Snake\Utils\StringUtils.cpp" />
+    <ClCompile Include="..\..\Snake\Vendors\CocosHelper\CocosHelper.cpp" />
+    <ClCompile Include="..\main.cpp" />
+    <ClCompile Include="..\Sys\Windows\windows_display.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\Snake\Engine\RenderSystem.h" />
+    <ClInclude Include="..\..\Snake\Engine\SEngine.h" />
+    <ClInclude Include="..\..\Snake\Game\Interface\SInterface.h" />
+    <ClInclude Include="..\..\Snake\Game\Interface\SInterfaceDelegate.h" />
+    <ClInclude Include="..\..\Snake\Game\Session\SGameField.h" />
+    <ClInclude Include="..\..\Snake\Game\Session\SGameFieldData.h" />
+    <ClInclude Include="..\..\Snake\Game\Session\SGameSession.h" />
+    <ClInclude Include="..\..\Snake\Game\Session\SGameSessionDelegate.h" />
+    <ClInclude Include="..\..\Snake\Game\Session\SSnake.h" />
+    <ClInclude Include="..\..\Snake\Game\Session\SSnakeData.h" />
+    <ClInclude Include="..\..\Snake\Game\Session\SSnakeDelegate.h" />
+    <ClInclude Include="..\..\Snake\Game\Session\SSnakeEnviromentInterface.h" />
+    <ClInclude Include="..\..\Snake\Game\Session\SSnakeTarget.h" />
+    <ClInclude Include="..\..\Snake\Game\SGame.h" />
+    <ClInclude Include="..\..\Snake\Sys\Display.h" />
+    <ClInclude Include="..\..\Snake\Sys\DisplayInputDelegate.h" />
+    <ClInclude Include="..\..\Snake\Utils\GlobalConstants.h" />
+    <ClInclude Include="..\..\Snake\Utils\MyRandom.h" />
+    <ClInclude Include="..\..\Snake\Utils\StringUtils.h" />
+    <ClInclude Include="..\..\Snake\Vendors\CocosHelper\CocosHelper.h" />
+    <ClInclude Include="..\glew.h" />
+    <ClInclude Include="..\header.h" />
+    <ClInclude Include="..\stdbool.h" />
+    <ClInclude Include="..\Sys\Windows\windows_display.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="glew32.dll" />
+    <None Include="iconv.dll" />
+    <None Include="libcurl.dll" />
+    <None Include="libtiff.dll" />
+    <None Include="libxml2.dll" />
+    <None Include="pthreadVCE2.dll" />
+    <None Include="zlib1.dll" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
