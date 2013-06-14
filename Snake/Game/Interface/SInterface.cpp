@@ -11,7 +11,7 @@
 #include "CocosHelper.h"
 #include "StringUtils.h"
 
-#define S_DEFAULT_FONT "HelveticaNeue-Bold"
+#define S_DEFAULT_FONT "HelveticaNeue-Light"
 #define S_COLOR_BLACK ccc3(0,0,0)
 #define S_COLOR_WHITE ccc3(255,255,255)
 #define S_DEFAULT_SIZE 20
@@ -74,9 +74,10 @@ _delegate_w(NULL)
     {
         _labelScore = CCLabelTTF::create("", S_DEFAULT_FONT, S_DEFAULT_SIZE);
         _labelScore->setColor(S_COLOR_BLACK);
+        _labelScore->setHorizontalAlignment(kCCTextAlignmentCenter);
         _labelScore->retain();
-        _labelScore->setAnchorPoint(ccp(0, 1));
-        _labelScore->setPosition(ccp(5, getContentSize().height));
+        _labelScore->setAnchorPoint(ccp(0.5, 1));
+        _labelScore->setPosition(ccp(160, getContentSize().height - 7));
         _nodeGame->addChild(_labelScore);
     }
     
@@ -127,8 +128,6 @@ _delegate_w(NULL)
         CocosHelper::PlaceNodeToTheCenterOfParent(_buttonRestart);
         CocosHelper::MoveNode(_buttonRestart, ccp(0, -70));
     }
-    
-    
 }
 
 SInterface::~SInterface()

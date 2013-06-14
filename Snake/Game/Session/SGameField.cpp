@@ -9,7 +9,7 @@
 #include "SGameField.h"
 #include "SGameFieldData.h"
 
-const float cellSize = 12;
+const float cellSize = 10;
 
 SGameField::SGameField(const int x, const int y, CCNode *node)
 :_node(node), _sprites(NULL)
@@ -71,7 +71,7 @@ CCPoint SGameField::ScreenCoordinatesForCell(const CCPoint &cell)
     
     CCPoint fieldZero = ccp(center.x - _data->GetWidth() * cellSize / 2.0, center.y - _data->GetHeight() * cellSize / 2.0);
     
-    CCPoint result = ccp(fieldZero.x + cell.x * cellSize, fieldZero.y + cell.y * cellSize);
+    CCPoint result = ccp(fieldZero.x + cell.x * cellSize, fieldZero.y + cell.y * cellSize - 20);
     return result;
 }
 

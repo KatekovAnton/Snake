@@ -29,7 +29,7 @@ SGameSession::SGameSession()
     CCDirector::sharedDirector()->getRunningScene()->addChild(_snakeNode);
 
     
-    _gameField = new SGameField(20, 30, _baseNode);
+    _gameField = new SGameField(32, 44, _baseNode);
     _snake = new SSnake(_gameField, _snakeNode);
     _snake->_delegate_w = this;
     GenerateNewTarget();

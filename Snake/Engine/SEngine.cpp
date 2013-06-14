@@ -51,7 +51,7 @@ void SEngine::Init() {
         CCFileUtils::sharedFileUtils()->setResourceDirectory("retina");
     
     
-    _director->setDisplayStats(true);
+    _director->setDisplayStats(false);
 }
 
 void SEngine::RunLoop(double delta)
@@ -63,7 +63,7 @@ void SEngine::RunLoop(double delta)
     _elapsedTime = delta;
     _fullTime += _elapsedTime;
     
-    glClearColor(0.8, 0.8, 0.8, 1.0f);
+    glClearColor(1, 1, 1, 1.0f);
     glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
     
     this->Update();
