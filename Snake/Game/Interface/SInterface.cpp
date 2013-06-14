@@ -72,12 +72,26 @@ _delegate_w(NULL)
     }
     
     {
+        CCSprite *spr = CCSprite::create("separator.png");
+        spr->setPosition(ccp(getContentSize().width/2, getContentSize().height/2 + 44/2 * 10 - 20));
+        _nodeGame->addChild(spr);
+    }
+    {
+        CCSprite *spr = CCSprite::create("separator.png");
+        spr->setPosition(ccp(getContentSize().width/2, getContentSize().height/2 - 44/2 * 10 - 20));
+        _nodeGame->addChild(spr);
+    }
+    
+    {
         _labelScore = CCLabelTTF::create("", S_DEFAULT_FONT, S_DEFAULT_SIZE);
         _labelScore->setColor(S_COLOR_BLACK);
         _labelScore->setHorizontalAlignment(kCCTextAlignmentCenter);
         _labelScore->retain();
-        _labelScore->setAnchorPoint(ccp(0.5, 1));
-        _labelScore->setPosition(ccp(160, getContentSize().height - 7));
+        _labelScore->setAnchorPoint(ccp(0.5, 0.5));
+        
+        float originy = (getContentSize().height + getContentSize().height/2 + 44/2 * 10 - 20)/2;
+        
+        _labelScore->setPosition(ccp(160, originy));
         _nodeGame->addChild(_labelScore);
     }
     

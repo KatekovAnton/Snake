@@ -20,6 +20,7 @@ SGameField::SGameField(const int x, const int y, CCNode *node)
 
 void SGameField::ShowGameField()
 {
+    return;
     HideGameField();
     _sprites = CCArray::create();
     _sprites->retain();
@@ -37,6 +38,7 @@ void SGameField::ShowGameField()
 
 void SGameField::HideGameField()
 {
+    return;
     if (!_sprites)
         return;
     
